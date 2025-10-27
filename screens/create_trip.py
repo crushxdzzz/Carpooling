@@ -31,14 +31,16 @@ class CreateTripScreen(Screen):
         self.date_button = Button(
             text='Выбрать дату',
             size_hint=(0.5, 0.15),
-            background_color=(0.4, 0.4, 0.8, 1)
+            background_color=(0.4, 0.4, 0.8, 1),
+            height=dp(30)
         )
         self.date_button.bind(on_press=self.open_date_picker)
         self.time_label = Label(text='Время: Не выбрано', size_hint_y=None, height=30)
         self.time_button = Button(
             text='Выбрать время',
             size_hint=(0.5, 0.15),
-            background_color=(0.4, 0.4, 0.8, 1)
+            background_color=(0.4, 0.4, 0.8, 1),
+            height=dp(30)
         )
         self.time_button.bind(on_press=self.open_time_picker)
         self.price = TextInput(hint_text='Цена за место (руб.)')
