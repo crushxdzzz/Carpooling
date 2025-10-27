@@ -6,6 +6,7 @@ from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.spinner import Spinner
 from kivy.app import App
+from kivy.metrics import dp
 
 class RegisterScreen(Screen):
     def __init__(self, **kwargs):
@@ -14,11 +15,11 @@ class RegisterScreen(Screen):
         
         btn_back = Button(
             text='Назад',
-            size_hint=(0.2, 0.1),
-            pos_hint={'top': 1, 'left': 1},
-            background_color=(0.5, 0.5, 0.5, 1),
-            font_size=16
+            size_hint=(0.3, None),
+            height=dp(40),
+            background_color=(0.6, 0.6, 0.6, 1)
         )
+
         btn_back.bind(on_press=lambda x: setattr(self.manager, 'current', 'welcome'))
         layout.add_widget(btn_back)
 
